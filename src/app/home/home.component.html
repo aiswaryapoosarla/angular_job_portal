@@ -1,0 +1,47 @@
+<div class="container">
+  <div>
+    <p>Search here</p>
+  <select [(ngModel)]="selectedOption">
+    <option value="frontend">frontend</option>
+    <option value="backend">backend</option>
+    <option value="full-stack">full-stack</option>
+  </select>
+</div>
+  <div *ngIf="selectedOption === 'frontend'"><br>
+   <p>
+            <b><u>Title:</u></b> {{ frontend.title }} <br>
+            <b><u>Description:</u></b> {{ frontend.description}}<br>
+            <b><u>Company:</u></b> {{ frontend.company}}<br>
+            <b><u>Salary:</u></b> {{ frontend.salary}}<br>
+          <button (click)="onClick()" type="button" class="btn btn-dark">
+            Apply
+          </button>
+        </p>
+  </div>
+  
+  <div *ngIf="selectedOption === 'backend'"><br>
+    <p>
+      <b><u>Title:</u></b> {{ backend.title }} <br>
+      <b><u>Description:</u></b> {{ backend.description}}<br>
+      <b><u>Company:</u></b> {{ backend.company}}<br>
+      <b><u>Salary:</u></b> {{ backend.salary}}<br>
+    <button (click)="onClick()" type="button" class="btn btn-dark">
+      Apply
+    </button>
+  </p>
+  </div>
+  
+  <div *ngIf="selectedOption === 'full-stack'"><br>
+    <p>
+      <b><u>Title:</u></b> {{ fullstack.title }} <br>
+      <b><u>Description:</u></b> {{ fullstack.description}}<br>
+      <b><u>Company:</u></b> {{ fullstack.company}}<br>
+      <b><u>Salary:</u></b> {{ fullstack.salary}}<br>
+    <button (click)="onClick()" type="button" class="btn btn-dark">
+      Apply
+    </button>
+  </p>
+
+</div>
+</div>
+  
